@@ -1,0 +1,115 @@
+.rounded-button {
+    border-width: 1px;
+    /*border-color: #000000;*/
+    border-color: rgba(0,0,0,0.3);
+    border-style: solid;
+    margin: 10px 3px 10px 3px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
+
+.first-rounded-button {
+    margin-left: 10px;
+}
+
+.loading-animation {
+    box-shadow: 0 0 0 0 rgb(247, 77, 77);
+    transform: scale(1);
+    animation: pulse_animation 2s infinite;
+}
+
+@keyframes pulse_animation {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgb(247, 77, 77);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* AI Prompt Container */
+.ai-prompt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced spacing for compactness */
+    padding: 12px; /* Slightly more padding */
+    background-color: #f5f5f5; /* Softer background for contrast */
+    border: 1px solid #dcdcdc; /* Subtle border */
+    border-radius: 6px; /* Smoother corners */
+    margin-bottom: 12px; /* Space below the container */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Textarea Inside AI Prompt Container */
+.ai-prompt-textarea {
+    width: 100%;
+    padding: 10px; /* Slightly larger padding for comfort */
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    resize: none; /* Prevent manual resizing */
+    overflow: hidden;
+    line-height: 1.5;
+    font-family: inherit;
+    min-height: 50px; /* Slightly taller for a better experience */
+    background-color: #ffffff; /* White background */
+}
+
+/* Generate Button */
+.ai-generate-button {
+    padding: 8px 12px; /* Adjusted for proportional size */
+    font-size: 13px; /* Slightly smaller font */
+    background-color: #0073b1; /* LinkedIn Blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px; /* Smaller radius for a cleaner look */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    align-self: flex-start; /* Align button to the start for a cleaner layout */
+}
+
+.ai-generate-button:hover {
+    background-color: #005a8c; /* Slightly darker blue on hover */
+}
+
+.ai-generate-button:active {
+    background-color: #00426b; /* Even darker on click */
+}
+
+/* Add this CSS for a spinner effect */
+.ai-generate-button.loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

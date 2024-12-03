@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Tones</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Comment Tones</h1>
+    </header>
+
+    <button id="add-tone">+ Add New Tone</button>
+    <div id="tone-list">
+        <!-- Tone items will be dynamically loaded here -->
+    </div>
+
+    <div id="tone-editor" style="display: none;">
+        <h2 id="editor-title">Add/Edit Tone</h2>
+        <label>
+            <strong>Tone Name:</strong>
+            <input type="text" id="tone-name" placeholder="e.g., Analyst, Supporter">
+        </label>
+        <label>
+            <strong>Prompt:</strong>
+            <textarea id="tone-prompt" placeholder="Write a short description for the tone..."></textarea>
+        </label>
+        <button id="save-tone">Save Tone</button>
+        <button id="cancel-edit">Cancel</button>
+    </div>
+
+    <div id="delete-confirmation-modal" style="display: none;">
+        <div class="modal-content">
+            <p>Are you sure you want to delete this tone?</p>
+            <button id="confirm-delete" class="confirm">Yes, Delete</button>
+            <button id="cancel-delete" class="cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

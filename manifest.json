@@ -1,0 +1,44 @@
+{
+    "manifest_version": 3,
+    "name": "InteLink AI",
+    "version": "0.0.1",
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "description": "A LinkedIn comment generator that operates entirely locally using Chrome's built-in AI capabilities. Enjoy unlimited, cost-free usage while keeping your data private and secure. Easily manage your custom tones and add new ones through an intuitive dashboard.",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.linkedin.com/company/*",
+                "https://www.linkedin.com/feed/*",
+                "https://www.linkedin.com/in/*",
+                "https://www.linkedin.com/news/*",
+                "https://www.linkedin.com/posts/*",
+                "https://www.linkedin.com/pulse/*",
+                "https://www.linkedin.com/search/results/*"
+            ],
+            "css": [
+                "content.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "InteLink AI"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
