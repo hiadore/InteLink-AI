@@ -3,6 +3,8 @@
 
 **InteLink AI** is a Chrome extension designed to help users create personalized LinkedIn comments, posts, and recommendations using AI. With the integration of the Writer API, users can effortlessly generate content with customizable tones to enhance engagement and optimize their LinkedIn presence.
 
+Check out how it works in this YouTube video:
+
 [![YouTube](http://i.ytimg.com/vi/m-q07yfTpJw/hqdefault.jpg)](https://www.youtube.com/watch?v=m-q07yfTpJw)
 
 ## Features & Functionality
